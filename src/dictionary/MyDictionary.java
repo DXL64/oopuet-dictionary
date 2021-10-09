@@ -1,4 +1,4 @@
-package main;
+package dictionary;
 
 import java.io.IOException;
 import java.util.ArrayList;
