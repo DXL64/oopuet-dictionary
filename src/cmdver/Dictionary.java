@@ -1,3 +1,5 @@
+package cmdver;
+
 import java.util.ArrayList;
 
 public class Dictionary {

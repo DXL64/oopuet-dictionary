@@ -1,3 +1,5 @@
+package cmdver;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -18,7 +20,7 @@ public class DictionaryManagement {
             String wordExplain =  scanner.nextLine();
             dictionary.addNewWord(wordTarget, wordExplain);
         }
-        
+
         System.out.println("END");
         scanner.close();
     }
@@ -50,7 +52,7 @@ public class DictionaryManagement {
     public void dictionaryLookup() {
         System.out.println("START LOOP UP: ");
         // while () {
-            
+
         // }
 
     }

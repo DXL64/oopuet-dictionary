@@ -1,3 +1,5 @@
+package cmdver;
+
 public class Word {
     private final String wordTarget;
     private final String wordExplain;

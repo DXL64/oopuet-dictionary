@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="chardet">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/chardet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-lang-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-text-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/lzo-core-1.0.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
