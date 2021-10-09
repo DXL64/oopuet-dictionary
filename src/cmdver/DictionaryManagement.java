@@ -49,11 +49,23 @@ public class DictionaryManagement {
         }
     }
 
+    /**
+     * Look up a word in dictionary.
+     * Input from commandline
+     */
     public void dictionaryLookup() {
         System.out.println("START LOOP UP: ");
         // while () {
 
         // }
+
+    }
+
+    /**
+     * Search a word in dictionary.
+     * Input from commandline
+     */
+    public void dictionarySearcher() {
 
     }
 

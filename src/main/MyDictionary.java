@@ -1,26 +1,26 @@
+package main;
+
 import java.io.IOException;
-import com.knziha.plod.dictionary.mdict;
+import java.util.ArrayList;
 
 public class MyDictionary {
     public static void main(String[] args) throws IOException {
-        System.out.println("START: ");
+        System.out.println("START: " + "\n");
         String key = "hello";
-        mdict md = new mdict("D:\\workspace\\git\\djun100\\mdict-java\\res\\Oxford Advanced Learner_s Dictionary\\Oxford Advanced Learner_s Dictionary.mdx");
-        int search_result = md.lookUp(key, true);//true means to match strictly
 
-        for (int i = -100; i < 100; i++) {
-            System.out.println(md.getEntryAt(search_result + i));
+        MultiDictionary dict = new MultiDictionary("res\\mdxs.txt");
+
+        System.out.println("LOOK UP TEST: " + "\n");
+        ArrayList<String> wordExplains = dict.lookUp(key);
+        for (int i = 0; i < wordExplains.size(); i++) {
+            System.out.println(wordExplains.get(i));
         }
 
-        System.out.println(search_result);
-        if(search_result != -1) {
-            String html_contents = md.getRecordAt(search_result);
-            String entry_name = md.getEntryAt(search_result);
-            System.out.println(html_contents);
-            System.out.println(md.processStyleSheet(html_contents));
-            System.out.println(entry_name);
+        System.out.println("LOOK UP TEST: " + "\n");
+        ArrayList<String> wordTargets = dict.searcher(key, -10);
+        for (int i = 0; i < 10; i++) {
+            System.out.println(wordTargets.get(i));
         }
-        System.out.println("PRINT ALL CONTENTS:");
-        System.out.println("END.");
+        System.out.println("END." + "\n");
     }
 }

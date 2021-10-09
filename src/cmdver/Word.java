@@ -9,10 +9,19 @@ public class Word {
         this.wordExplain = wordExplain;
     }
 
+
+    /**
+     * Getter method for {@code wordTarget}.
+     * @return word target {@code String}
+     */
     public String getWordTarget() {
         return wordTarget;
     }
 
+    /**
+     * Getter method for {@code wordExplain}.
+     * @return word explain {@code String}
+     */
     public String getWordExplain() {
         return wordExplain;
     }
