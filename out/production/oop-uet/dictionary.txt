@@ -1,0 +1,3 @@
+Hello   Xin chào
+House   Nhà
+Hide    Giấu
