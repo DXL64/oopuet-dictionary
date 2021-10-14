@@ -60,6 +60,11 @@ public class mdict extends mdBase{
 	
 	public final static Pattern replaceReg = Pattern.compile(" |:|\\.|,|-|\'|\\(|\\)|#|<|>|!|\\n");
 	public final static Pattern markerReg = Pattern.compile("`([\\w\\W]{1,3}?)`");// for `1` `2`...
+	public final static Pattern imageReg = Pattern.compile("\\.jpg|\\.bmp|\\.eps|\\.gif|\\.png|\\.tif|\\.tiff|\\.svg|\\.jpe|\\.jpeg|\\.ico|\\.tga|\\.pic$", Pattern.CASE_INSENSITIVE);
+	public final static Pattern htmlReg = Pattern.compile("\\.html$", Pattern.CASE_INSENSITIVE);
+	public final static Pattern mobiReg = Pattern.compile("\\.mobi|\\.azw|\\.azw3$", Pattern.CASE_INSENSITIVE);
+	public final static Pattern soundReg = Pattern.compile("\\.mp3|\\.ogg|\\.wav|\\.spx$", Pattern.CASE_INSENSITIVE);
+	public final static Pattern videoReg = Pattern.compile("\\.mp4|\\.avi$", Pattern.CASE_INSENSITIVE);
     private final static String linkRenderStr = "@@@LINK=";
     
     protected mdictRes mdd;
@@ -285,8 +290,25 @@ public class mdict extends mdBase{
         // substitute styles
         //if self._substyle and self._stylesheet:
         //    record = self._substitute_stylesheet(record);
-        
-        return	record_str;           	
+		StringBuilder LoPageBuilder = new StringBuilder();
+		LoPageBuilder.append(record_str.toString());
+		String key = getEntryAt(position);
+		if(imageReg.matcher(key).find()){
+			System.out.println("IMAGE");
+			LoPageBuilder.append("<img style='width:100%; height:auto;' src=\"").append(key).append("\"></img>");
+		}
+		else if(soundReg.matcher(key).find()){
+			System.out.println("SOUND");
+			LoPageBuilder.append("<h2>").append(key).append("</h2>");
+			LoPageBuilder.append("<audio controls='controls' autoplay='autoplay' src=\"").append(key).append("\"></audio>");
+			LoPageBuilder.append("<h2 style='top:56%'>").append(key).append("</h2>");
+		}
+		else if(videoReg.matcher(key).find()){
+			System.out.println("VIDEO");
+			LoPageBuilder.append("<video width='320' height='240' controls=\"controls\" src=\"").append(key).append("\"></video>");
+		}
+
+        return	LoPageBuilder.toString();
     }
   
 

@@ -1,18 +1,15 @@
 package test;
 
 import java.io.ByteArrayOutputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.nio.BufferOverflowException;
 import java.nio.ByteBuffer;
 import java.util.zip.Deflater;
 import java.util.zip.InflaterOutputStream;
 
+import com.knziha.plod.dictionary.BU;
 import com.knziha.plod.dictionary.CMN;
 import com.knziha.plod.dictionary.mdict;
-import com.knziha.plod.dictionary.BU;
-import com.knziha.plod.dictionaryBuilder.mdictBuilder;
 
 /**
  * TEsts

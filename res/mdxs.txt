@@ -1,1 +1,6 @@
 res\mdict\Oxford Advanced Learner_s Dictionary\Oxford Advanced Learner_s Dictionary.mdx
+res\mdict\American Heritage Dictionary 5\American Heritage Dictionary 5.mdx
+res\mdict\Cambridge Advanced Learner\Cambridge Advanced Learner Dictionary 4.mdx
+res\mdict\Collins English Dictionary and Thesaurus, 2015\Collins English Dictionary and Thesaurus, 2015.mdx
+res\mdict\Concise Oxford Dictionary 11th ed\Oxford Concise Dictionary 11th ed.mdx
+res\mdict\SoundEN\Sound-EN.mdx

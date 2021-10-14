@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Scanner;
 
 import com.knziha.plod.dictionary.mdict;
@@ -50,23 +51,67 @@ public class MultiDictionary {
     }
 
     /**
-     * Search method.
+     * Searcher method
+     * @param key target word
+     * @return {@code ArrayList<String>} word that has same prefix
+     */
+    public ArrayList<String> searcher(String key) {
+        return searcher(key,16);
+    }
+
+
+    /**
+     * Searcher method with limit.
+     * @param key target word
+     * @param limit numbers of word after input word
+     * @return {@code ArrayList<String>} word that has same prefix
+     */
+    public ArrayList<String> searcher(String key, int limit) {
+        ArrayList<String> entryNames = new ArrayList<>();
+
+        int search_result = mdxs.get(0).lookUp(key, false);
+        for (int i = 1; i <= limit; i++) {
+            String temp = mdxs.get(0).getEntryAt(search_result + i);
+            if (temp.toLowerCase(Locale.ROOT).contains(key)) {
+                entryNames.add(temp);
+            } else {
+                break;
+            }
+        }
+        return entryNames;
+    }
+
+
+    /**
+     * adjacentWord method.
      * @param key input word
      * @param n
      * {@code n > 0} numbers of word after input word
      * {@code n < 0} numbers of word before input word
-     * @return {@code ArrayList<String>} 10 words after the input word
+     * @return {@code ArrayList<String>} n words after the input word
      */
-    public ArrayList<String> searcher(String key, int n) throws IOException {
+    public ArrayList<String> adjacentWord(String key, int n) throws IOException {
         ArrayList<String> entryNames = new ArrayList<>();
-        int search_result = mdxs.get(0).lookUp(key, true);
+
+        int search_result = mdxs.get(0).lookUp(key, false);
+
         for (int i = 1; i <= Math.abs(n); i++) {
+
             if (n > 0) {
                 entryNames.add(mdxs.get(0).getEntryAt(search_result + i));
             } else {
                 entryNames.add(mdxs.get(0).getEntryAt(search_result - i));
             }
         }
+
         return entryNames;
+    }
+
+    public ArrayList<String> nameOfDicionary() {
+        ArrayList<String> dictName = new ArrayList<>();
+        for (int i = 0; i < mdxs.size(); i++) {
+            dictName.add(mdxs.get(i)._Dictionary_Name);
+        }
+        return dictName;
     }
 }
