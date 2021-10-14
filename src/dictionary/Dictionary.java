@@ -19,18 +19,12 @@ public class Dictionary {
     public void removeWord(String key) {
         words.remove(key);
     }
-
+    public void changeWord(String key, String mean) {
+        key = lowerCase(key);
+        mean = lowerCase(mean);
+        words.replace(words.get(key), mean);
+    }
     public int numberOrWords() {
         return words.size();
     }
-
-    /*
-    public String getWordTarget(int index) {
-        return words.get(index);
-    }
-
-    public String getWordExplain(int index) {
-        return words.get(index;
-    }
-     */
 }
