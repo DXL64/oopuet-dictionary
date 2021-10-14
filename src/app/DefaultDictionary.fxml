@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<TabPane id="AllPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SceneBuilder">
+    <tabs>
+        <Tab text="Default Dictionary">
+            <content>
+                <AnchorPane blendMode="MULTIPLY" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <Button id="success" fx:id="dd_buttonAddNewWord" alignment="CENTER_RIGHT" layoutX="200.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#dd_onClickButtonAddNewWord" prefHeight="31.0" prefWidth="117.0" text="Add new word" textAlignment="CENTER">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <ColorAdjust />
+                     </effect></Button>
+                        <Button id="showAll" fx:id="dd_buttonShowAllWords" alignment="CENTER_RIGHT" layoutX="318.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#dd_onClickButtonShowAllWords" prefHeight="31.0" prefWidth="118.0" text="Show all words" />
+                        <Button id="delete" fx:id="dd_buttonDeleteThisWord" alignment="CENTER_RIGHT" layoutX="437.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#dd_onClickButtonDeleteWord" prefHeight="31.0" prefWidth="121.0" text="Delete this word" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="672.0" layoutY="1.0" onMouseClicked="#dd_onClickFindIcon" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@findIcon.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="717.0" layoutY="1.0" onMouseClicked="#dd_onClickDeleteIcon" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@deleteIcon.png" />
+                            </image>
+                        </ImageView>
+                        <TextField fx:id="dd_textFieldFindWord" layoutX="-1.0" layoutY="1.0" onKeyReleased="#dd_onChangeTextFieldFindWord" prefHeight="25.0" prefWidth="673.0" promptText="Type sth" />
+                        <ListView fx:id="dd_listViewSearcher" layoutY="26.0" onKeyPressed="#dd_onPushItemOfListViewSearcher" onMouseClicked="#dd_onPushItemOfListViewSearcher" prefHeight="395.0" prefWidth="200.0" />
+                        <Button id="change" fx:id="dd_buttonChangeThisWord" alignment="CENTER_RIGHT" layoutX="560.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#dd_onClickButtonChangeWord" prefHeight="31.0" prefWidth="131.0" text="Change this word" />
+                        <ListView fx:id="dd_listViewShowWord" layoutX="217.0" layoutY="160.0" prefHeight="260.0" prefWidth="525.0" />
+                        <VBox fx:id="dd_vBoxAddNewWord" layoutX="200.0" layoutY="62.0" prefHeight="78.0" prefWidth="209.0">
+                            <children>
+                                <TextField fx:id="dd_textFieldAddEnglish" prefHeight="25.0" prefWidth="203.0" promptText="English" />
+                                <TextField fx:id="dd_textFieldAddVietnamese" prefHeight="25.0" prefWidth="204.0" promptText="Vietnamese" />
+                                <Button id="success" fx:id="dd_buttonSubmitAddNewWord" mnemonicParsing="false" onMouseClicked="#dd_onClickButtonSubmitAddNewWord" prefHeight="29.0" prefWidth="59.0" text="Submit" />
+                            </children>
+                        </VBox>
+                        <VBox fx:id="dd_vBoxChangeThisWord" layoutX="515.0" layoutY="60.0" prefHeight="81.0" prefWidth="219.0">
+                            <children>
+                                <TextField fx:id="dd_textFieldChangeMeanOfWord" prefHeight="25.0" prefWidth="219.0" promptText="New mean of this word" />
+                                <Button id="success" fx:id="dd_buttonSubmitChangeWord" minWidth="44.0" mnemonicParsing="false" onMouseClicked="#dd_onClickButtonSubmitChangeThisWord" prefHeight="27.0" prefWidth="62.0" text="Submit">
+                                    <font>
+                                        <Font />
+                                    </font>
+                                </Button>
+                            </children>
+                        </VBox>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="695.0" layoutY="1.0" onMouseClicked="#dd_onClickListenIcon" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@listenIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="203.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@AddIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="320.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Untitled.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="437.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@deleteIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="561.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@modify.png" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+      <Tab text="Multi Dictionary">
+         <content>
+            <AnchorPane>
+               <children>
+                  <WebView fx:id="md_webView" layoutX="173.0" layoutY="41.0" prefHeight="405.0" prefWidth="569.0" />
+                  <TextField fx:id="md_textFieldFindWord" layoutY="1.0" onKeyReleased="#md_onChangeTextFieldFindWord" prefHeight="25.0" prefWidth="420.0" promptText="Type sth" />
+                  <SplitMenuButton fx:id="md_splitMenuButtonChooseDictionary" alignment="CENTER" layoutX="489.0" layoutY="1.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="247.0" styleClass="split-menu-btn-info" text="Choose Dictionary">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Oxford Advanced Learner's Dictionary">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@1_Oxford_Advanced_Learners_Dictionary.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="American Heritage Dictionary 5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@American_Heritage_Dictionary_5.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Cambridge Advanced Learner Dictionary 4">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Cambridge_Advanced_Learner_Dictionary_4.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Collins English Dictionary and Thesaurus, 2015">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Collins_English_Dictionary_and_Thesaurus_2015.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Oxford Concise Dictionary 11th ed">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Oxford_Concise_Dictionary_11th_ed.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Merriam-Webster's Dicionary of Symnonyms and Antonyms">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Merriam-Websters_Dictionary_of_Synonyms_and_Antonyms.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Merriam-Webster's Collegiate Thesaurus,2015">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Merriam-Websters_Collegiate_Thesaurus_2015.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Online Etymology Dictionary">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Online_Etymology_Dictionary.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Oxford Collocations Dictionary_2">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Oxford_Collocations_Dictionary_2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Dictionary.com Unabridged 2016">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Dictionary.com_Unabridged_2016.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@selectIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></SplitMenuButton>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="420.0" layoutY="1.0" onMouseClicked="#md_onClickFindIcon" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@findIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="465.0" layoutY="1.0" onMouseClicked="#md_onClickDeleteIcon" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@deleteIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ListView fx:id="md_listViewSearcher" layoutY="40.0" onMouseClicked="#md_onPushItemOfListViewSearcher" prefHeight="409.0" prefWidth="159.0" />
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="442.0" layoutY="1.0" onMouseClicked="#md_onClickListenIcon" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@listenIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab onSelectionChanged="#gg_changeTabToGoogleTranslate" text="Google Translate">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <WebView fx:id="gg_webView" layoutX="3.0" layoutY="-1.0" prefHeight="447.0" prefWidth="743.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+    </tabs>
+</TabPane>

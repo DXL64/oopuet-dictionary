@@ -1,0 +1,89 @@
+#showAll {
+    -fx-background-color: #5bc0de;
+    -fx-border-color: #46b8da;
+    -fx-fill: #fff;
+}
+#showAll:hover, #showAll:focused {
+    -fx-fill: #fff;
+    -fx-background-color: #31b0d5;
+    -fx-border-color: #269abc;
+}
+#delete {
+    -fx-background-color: #d9534f;
+    -fx-border-color: #d43f3a;
+}
+#delete:focused, #delete:hover {
+    -fx-background-color: #c9302c;
+    -fx-border-color: #761c19;
+}
+#change {
+    -fx-background-color: #f0ad4e;
+    -fx-border-color: #eea236;
+}
+#change:focused, #change:hover {
+    -fx-background-color: #ec971f;
+    -fx-border-color: #985f0d;
+}
+#success, .tab {
+    -fx-background-color: #5cb85c;
+    -fx-border-color: #4cae4c;
+}
+#success:focused, .tab:focused, #success:hover, .tab:hover {
+    -fx-background-color: #449d44;
+}
+.tab:selected {
+    -fx-background-color: #259910;
+}
+.split-menu-btn-info > .arrow {
+    -fx-text-fill: black;
+    -fx-fill: #fff; }
+
+.split-menu-btn-info > .label, .split-menu-btn-info > .arrow-button {
+    -fx-fill: #fff;
+    -fx-text-fill: black;
+    -fx-background-color: #5bc0de;
+    -fx-border-color: #5bc0de; }
+
+.split-menu-btn-info:focused > .label, .split-menu-btn-info:focused > .arrow-button, .split-menu-btn-info.focused > .label, .split-menu-btn-info.focused > .arrow-button {
+    -fx-fill: #fff;
+    -fx-text-fill: black;
+    -fx-background-color: #31b0d5;
+    -fx-border-color: #1b6d85; }
+
+.split-menu-btn-info:hover > .label, .split-menu-btn-info:hover > .arrow-button {
+    -fx-fill: #fff;
+    -fx-text-fill: black;
+    -fx-background-color: #31b0d5;
+    -fx-border-color: #269abc; }
+
+.split-menu-btn-info:pressed > .label, .split-menu-btn-info:pressed > .arrow-button, .split-menu-btn-info.pressed > .label, .split-menu-btn-info.pressed > .arrow-button, .open > .split-menu-btn-info.dropdown-toggle > .label, .open > .split-menu-btn-info.dropdown-toggle > .arrow-button {
+    -fx-background-color: #31b0d5;
+    -fx-text-fill: black;
+    -fx-border-color: #269abc; }
+
+.split-menu-btn-info:pressed:hover > .label, .split-menu-btn-info:pressed:hover > .arrow-button, .split-menu-btn-info:pressed:focused > .label, .split-menu-btn-info:pressed:focused > .arrow-button, .split-menu-btn-info:pressed.focused > .label, .split-menu-btn-info:pressed.focused > .arrow-button, .split-menu-btn-info.pressed:hover > .label, .split-menu-btn-info.pressed:hover > .arrow-button, .split-menu-btn-info.pressed:focused > .label, .split-menu-btn-info.pressed:focused > .arrow-button, .split-menu-btn-info.pressed.focused > .label, .split-menu-btn-info.pressed.focused > .arrow-button, .open > .split-menu-btn-info.dropdown-toggle:hover > .label, .open > .split-menu-btn-info.dropdown-toggle:hover > .arrow-button, .open > .split-menu-btn-info.dropdown-toggle:focused > .label, .open > .split-menu-btn-info.dropdown-toggle:focused > .arrow-button, .open > .split-menu-btn-info.dropdown-toggle.focused > .label, .open > .split-menu-btn-info.dropdown-toggle.focused > .arrow-button {
+    -fx-fill: #fff;
+    -fx-text-fill: black;
+    -fx-background-color: #269abc;
+    -fx-border-color: #1b6d85; }
+
+.split-menu-btn-info:selected > .label, .split-menu-btn-info:selected > .arrow-button, .split-menu-btn-info.selected > .label, .split-menu-btn-info.selected > .arrow-button {
+    -fx-fill: #fff;
+    -fx-text-fill: black;
+    -fx-background-color: #31b0d5;
+    -fx-border-color: #269abc; }
+
+.split-menu-btn-info:selected:hover > .label, .split-menu-btn-info:selected:hover > .arrow-button, .split-menu-btn-info:selected:focused > .label, .split-menu-btn-info:selected:focused > .arrow-button, .split-menu-btn-info:selected.focused > .label, .split-menu-btn-info:selected.focused > .arrow-button, .split-menu-btn-info.selected:hover > .label, .split-menu-btn-info.selected:hover > .arrow-button, .split-menu-btn-info.selected:focused > .label, .split-menu-btn-info.selected:focused > .arrow-button, .split-menu-btn-info.selected.focused > .label, .split-menu-btn-info.selected.focused > .arrow-button {
+
+    -fx-fill: #fff;
+    -fx-text-fill: black;
+    -fx-background-color: #269abc;
+    -fx-border-color: #1b6d85; }
+
+.split-menu-btn-info:pressed, .split-menu-btn-info.pressed, .open > .split-menu-btn-info.dropdown-toggle {
+    background-image: none; }
+
+.split-menu-btn-info.disabled > .label, .split-menu-btn-info.disabled > .arrow-button, .split-menu-btn-info.disabled:hover > .label, .split-menu-btn-info.disabled:hover > .arrow-button, .split-menu-btn-info.disabled:focused > .label, .split-menu-btn-info.disabled:focused > .arrow-button, .split-menu-btn-info.disabled.focused > .label, .split-menu-btn-info.disabled.focused > .arrow-button, .split-menu-btn-info.disabled:pressed > .label, .split-menu-btn-info.disabled:pressed > .arrow-button, .split-menu-btn-info.disabled.pressed > .label, .split-menu-btn-info.disabled.pressed > .arrow-button, .split-menu-btn-info[disabled] > .label, .split-menu-btn-info[disabled] > .arrow-button, .split-menu-btn-info[disabled]:hover > .label, .split-menu-btn-info[disabled]:hover > .arrow-button, .split-menu-btn-info[disabled]:focused > .label, .split-menu-btn-info[disabled]:focused > .arrow-button, .split-menu-btn-info[disabled].focused > .label, .split-menu-btn-info[disabled].focused > .arrow-button, .split-menu-btn-info[disabled]:pressed > .label, .split-menu-btn-info[disabled]:pressed > .arrow-button, .split-menu-btn-info[disabled].pressed > .label, .split-menu-btn-info[disabled].pressed > .arrow-button, fieldset[disabled] .split-menu-btn-info > .label, fieldset[disabled] .split-menu-btn-info > .arrow-button, fieldset[disabled] .split-menu-btn-info:hover > .label, fieldset[disabled] .split-menu-btn-info:hover > .arrow-button, fieldset[disabled] .split-menu-btn-info:focused > .label, fieldset[disabled] .split-menu-btn-info:focused > .arrow-button, fieldset[disabled] .split-menu-btn-info.focused > .label, fieldset[disabled] .split-menu-btn-info.focused > .arrow-button, fieldset[disabled] .split-menu-btn-info:pressed > .label, fieldset[disabled] .split-menu-btn-info:pressed > .arrow-button, fieldset[disabled] .split-menu-btn-info.pressed > .label, fieldset[disabled] .split-menu-btn-info.pressed > .arrow-button {
+    -fx-background-color: #5bc0de;
+    -fx-text-fill: black;
+    -fx-border-color: #46b8da; }

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style type="text/css">.entry {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 160%;
+    margin: 0;
+    padding: 0
+}
+
+.h-g {
+    margin: 0;
+    padding: 0
+}
+
+ol {
+    list-style-type: none
+}
+
+img {
+    max-width: 100%;
+    border: none
+}
+
+a {
+    font-weight: bold;
+    color: #004AAC
+}
+
+.oxf {
+    color: #C76E06
+}
+
+.gram-g, .label-g, .dis-g {
+    color: #004AAC
+}
+
+.hm, pnc.hm, .xhm {
+    font-size: smaller;
+    margin-left: 1px;
+    position: relative;
+    top: -5.25px
+}
+
+block {
+    margin: 0 0 5px 0;
+    display: block;
+    border-bottom: 1px dashed #333
+}
+
+block a {
+    color: #8f0610
+}
+
+.topc, .top-g, .wtg {
+    margin: 0;
+    padding: 0
+}
+
+.wtg .aca {
+    display: inline-block;
+    margin-top: 0px;
+    padding: 1px 4px 0;
+    line-height: 15px;
+    font-size: 75%;
+    font-weight: bold;
+    color: white;
+    background-color: #C76E06
+}
+
+.wtg .oxf {
+    font-size: 20px;
+    color: white
+}
+
+.wtg h2 {
+    display: inline-block;
+    margin: 0;
+    padding: 0 5px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif
+}
+
+.wtg .pos {
+    color: #8f0610;
+    font-weight: bold;
+    font-style: italic;
+    padding-left: 5px
+}
+
+.top-g .v-gs:not([type~="sym"]) {
+    display: block
+}
+
+.pgs {
+    display: inline-block;
+    margin: 0;
+    padding-left: 5px
+}
+
+.pgs .phon {
+    color: #004aac
+}
+
+.pgs a {
+    display: inline-block
+}
+
+.pgs img {
+    width: 33px;
+    height: 30px;
+    margin-bottom: -4px
+}
+
+.vp-g .pgs {
+    display: inline
+}
+
+.pron-g {
+    white-space: nowrap
+}
+
+.cf {
+    font-weight: bold
+}
+
+.sn-gs li {
+    display: block
+}
+
+.sn-gs .shcut {
+    display: block;
+    margin-top: 8px;
+    font-size: 110%;
+    font-weight: bold;
+    color: #C76E06;
+    border-bottom: 1px solid #e8c49a
+}
+
+.sn-gs .sn-g {
+    display: block
+}
+
+.sn-gs .sn-g .num {
+    font-weight: bold;
+    padding-right: 5px
+}
+
+.sn-gs .sn-g .xr-gs {
+    display: block
+}
+
+.sn-gs .sn-g .xr-gs:before {
+    content: "➔";
+    color: #C76E06;
+    margin-right: 4px;
+    position: relative;
+    top: 2px
+}
+
+.sn-gs .sn-g .xr-gs .prefix {
+    text-transform: uppercase;
+    font-size: 80%;
+    margin-right: 3px
+}
+
+.sn-gs .x-gs {
+    display: block;
+    padding-left: 10px
+}
+
+.sn-gs .x-gs .x-g {
+    display: block;
+    font-family: Georgia, serif;
+    color: #666
+}
+
+.sn-gs .x-gs .x-g:before {
+    content: "•";
+    color: #C76E06
+}
+
+.sn-gs .un {
+    display: block;
+    background-color: #F3E2CD;
+    margin: 10px;
+    padding: 5px
+}
+
+.sn-gs .un .x-gs, .sn-gs .un .x-gs .x-g {
+    display: inline;
+    margin: 0;
+    padding: 0
+}
+
+.sn-gs .un .x-gs .x-g:before {
+    content: "▶"
+}
+
+.idm-gs, .pv-gs {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 1px solid #e8c49a;
+    border-radius: 5px
+}
+
+.idm-gs .idm-g {
+    display: block;
+    margin-top: 5px
+}
+
+.idm-gs .heading, .pv-gs .heading {
+    display: block;
+    margin: 5px;
+    font-size: 110%;
+    font-weight: bold;
+    color: #C76E06
+}
+
+.idm-gs .idm {
+    display: inline-block;
+    font-weight: bold
+}
+
+.idm-gs ol {
+    padding: 0
+}
+
+.idm-gs ol .sn-gs {
+    display: block;
+    padding-left: 10px
+}
+
+.pv-gs .pv-g {
+    display: block;
+    margin: 0;
+    padding: 0
+}
+
+.pv-gs .xr-gs a {
+    display: block
+}
+
+.pv-gs .pv-g h4 {
+    display: inline;
+    margin: 0
+}
+
+.pv-gs .pv-g a {
+    display: inline
+}
+
+.pvarr:before {
+    content: "↔"
+}
+
+.eb {
+    color: #333;
+    font-weight: bold
+}
+
+.sn-gs .sn-g .clps {
+    margin-left: 10px
+}
+
+.clps {
+    margin: 5px 0;
+    padding: 0;
+    display: block;
+    border-left: 3px solid #C76E06;
+    background-color: #F9F0E5
+}
+
+.clps .heading {
+    display: block;
+    margin: 0;
+    padding: 2px 5px;
+    font-size: 100%;
+    font-weight: bold;
+    color: #333
+}
+
+.clps .heading:hover {
+    color: #C76E06;
+    cursor: pointer;
+    background-color: #EED5B7
+}
+
+.topc .clps .heading:hover {
+    color: #4577bf;
+    cursor: pointer;
+    background-color: #bed3ed
+}
+
+.topc .clps .opbox .heading {
+    color: #4577bf;
+    background-color: #bed3ed
+}
+
+.clps .opbox .heading {
+    color: #C76E06;
+    background-color: #EED5B7
+}
+
+.clps .unbox .heading:before {
+    content: "＋";
+    font-weight: 900
+}
+
+.clps .unbox .body, .clps .unbox .def, .clps .unbox .h1, .clps .unbox .p {
+    display: none
+}
+
+.clps .opbox .body, .clps .unbox .h1, .clps .unbox .p {
+    display: block
+}
+
+.clps .opbox .def {
+    display: inline
+}
+
+.clps .opbox .heading:before {
+    content: "－";
+    font-weight: 900
+}
+
+.clps .body {
+    padding-left: 10px
+}
+
+.clps .body .vp-g {
+    display: block
+}
+
+.clps .body .vp {
+    font-weight: bold
+}
+
+.clps .body .vp .prefix {
+    font-weight: normal
+}
+
+.clps .body .x-gs .x-g {
+    display: block;
+    font-family: Georgia, serif
+}
+
+.clps .body .x-gs .x-g:before {
+    content: "•";
+    color: #C76E06
+}
+
+.clps .body .h1 {
+    margin-top: 5px;
+    display: block;
+    color: #C76E06;
+    font-size: 120%;
+    font-weight: bold
+}
+
+.clps .body .inline {
+    display: block;
+    font-weight: bold;
+    width: 100%;
+}
+
+.clps .body .inline .sep {
+    display: none
+}
+
+.clps .body .inline .li {
+    display: inline-block
+}
+
+.clps .inline .li:not(:last-of-type):after, .clps ul.inline .li:not(:last-of-type):after {
+    content: "•";
+    color: #C76E06;
+    margin-left: 4px;
+    width: 6px
+}
+
+.clps .body .deflist {
+    display: block
+}
+
+.clps .body .deflist .li {
+    display: block
+}
+
+.clps .body .deflist .li .eb {
+    color: #C76E06
+}
+
+.clps .body .li .un {
+    display: block;
+    background-color: #F3E2CD;
+    margin: 10px;
+    padding: 5px
+}
+
+.clps .body .li .x-gs {
+    display: inline;
+    margin: 0;
+    padding: 0
+}
+
+.clps .body .li .x-gs .x-g {
+    display: inline
+}
+
+.clps .body .li .x-gs .x-g:before {
+    content: "▶";
+    margin-left: 2px
+}
+
+.clps .body .h2 {
+    display: block;
+    margin-top: 5px;
+    color: #333;
+    font-size: 105%;
+    font-weight: bold;
+    border-bottom: 1px solid #e8c49a
+}
+
+.clps .body .p {
+    display: block;
+    margin: 0
+}
+
+.clps .body .p .xr-gs {
+    display: inline;
+    margin: 0
+}
+
+.clps .body .p .xr-gs:before {
+    content: "";
+    margin: 0
+}
+
+.clps .body .h3 {
+    margin: 8px 0;
+    display: block;
+    font-size: 110%;
+    font-weight: bold;
+    border-bottom: 1px solid #e8c49a
+}
+
+.clps .body .bullet .li {
+    display: block;
+    padding-left: 10px
+}
+
+.clps .body .bullet .li:before {
+    content: "■";
+    color: #C76E06;
+    margin-left: -10px
+}
+
+.topc {
+    background-color: #ecf5ff;
+    clear: both
+}
+
+.wtg {
+    background-color: #4577bf;
+    margin: 0;
+    padding: 0
+}
+
+.wtg h2 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    margin: 8px 0;
+    padding-left: 10px;
+    color: white;
+    line-height: 120%;
+    display: inline-block
+}
+
+.wtg .pos {
+    margin-left: 6px;
+    color: #ffffff
+}
+
+.idm-gs .un, .pv-gs .un {
+    margin-left: 18px;
+    margin-right: 18px;
+    padding: 12px 18px 12px 18px
+}
+
+.un, .clps {
+    background-color: #faf1e6;
+    display: block;
+    margin: 12px 0 18px 0
+}
+
+.sn-gs, .res-g {
+    display: block
+}
+
+.topc .un, .topc .clps {
+    background-color: #dce9f9;
+    border-left: 3px solid #4577bf
+}
+
+.un {
+    padding: 12px 18px 12px 18px;
+    text-indent: 0
+}</style>
+<div class="entry">
+    <ol class="h-g">
+        <div class="topc">
+            <div class="top-g">
+                <div class="wtg"><span class="oxf">✤</span>
+                    <h2 class="h">hello</h2><span class="pos">exclamation</span><span class="pnc">,</span><span
+                            class="pos">noun</span></div>
+                <span class="v-gs">(<span class="prefix">also</span> <span class="v-g"><span
+                        class="v"><strong>hullo</strong></span> <span class="label-g"><span class="geo">especially in British English</span></span></span>)</span><span
+                    class="v-gs">(<span class="v-g"><span class="label-g"><span class="geo">British English also</span></span> <span
+                    class="v"><strong>hallo</strong></span></span>)</span><span class="pos-g"><span class="pos">exclamation</span><span
+                    class="sep">,</span> <span class="pos">noun</span></span>
+                <div class="pgs"><span class="pron-g"><span class="prefix" style="color:#07255e">BrE</span> <span
+                        class="phon">/həˈləʊ/</span><span class="sound-uk"><a href="sound://sound/hello__gb_1.spx"><img
+                        src="/icon-audio-bre.png"></a></span></span><span class="sep">;</span> <span
+                        class="pron-g"><span class="prefix" style="color:#8f0610">NAmE</span> <span class="phon">/həˈloʊ/</span><span
+                        class="sound-us"><a href="sound://sound/hello__us_1.spx"><img
+                        src="/icon-audio-name.png"></a></span></span></div>
+                <span class="if-gs">(<span class="if-g"><span class="prefix">pl.</span> <span class="if">hell<span
+                        class="ptl">os</span></span></span><span class="sep">,</span> <span class="if-g"><span
+                        class="if">hullos</span></span><span class="sep">,</span> <span class="if-g"><span class="if">hallos</span></span>)</span>
+            </div>
+        </div>
+        <span class="sn-gs"><li class="sn-g"><span class="num">1</span><span class="sym_first"><span
+                class="oxf">✤</span></span><span class="def">used as a <span class="ndv">greeting</span> when you meet somebody, when you answer the telephone or when you want to attract somebody’s attention</span><span
+                class="x-gs"><span class="x-g"> <span class="rx-g"><span
+                class="x">Hello John, how are you?</span></span></span><span class="x-g"> <span class="rx-g"><span
+                class="x">Hello, is there anybody there?</span></span></span><span class="x-g"> <span class="rx-g"><span
+                class="x"><span class="cl"><strong>Say hello</strong></span> to Liz for me.</span></span></span><span
+                class="x-g"> <span class="rx-g"><span class="x">They exchanged hellos <span class="gl">(<span
+                class="prefix">=</span> said hello to each other)</span> and forced smiles.</span></span></span></span><span
+                class="clps"><span class="unbox"><span class="heading"
+                                                       onclick="if(this.parentNode.className=='unbox'){this.parentNode.className='opbox';}else{this.parentNode.className='unbox';}">More About</span><span
+                class="body"><span class="h1">greetings</span><span class="bullet"><span class="li">	<span
+                class="eb">Hello</span> is the most usual word and is used in all situations, including answering the telephone.</span><span
+                class="li">	<span class="eb">Hi</span> is more informal and is now very common.</span><span
+                class="li">	<span class="eb">How are you?</span> or <span class="eb">How are you doing?</span> (<span
+                class="ei">very informal</span>) often follow <span class="eb">Hello</span> and <span
+                class="eb">Hi</span>:<span class="x-gs"><span class="x-g"><span class="x">‘Hello, Mark.’ ‘Oh, hi, Kathy! How are you?’</span></span></span></span><span
+                class="li">	<span class="eb">Good morning</span> is often used by members of a family or people who work together when they see each other for the first time in the day. It can also be used in formal situations and on the telephone. In informal speech, people may just say <span
+                class="eb">Morning</span>.</span><span class="li">	<span class="eb">Good afternoon</span> and <span
+                class="eb">Good evening</span> are much less common. <span class="eb">Good night</span> is not used to greet somebody, but only to say goodbye late in the evening or when you are going to bed.</span><span
+                class="li">	If you are meeting someone for the first time, you can say <span class="eb">Pleased to meet you</span> or <span
+                class="eb">Nice to meet you</span> (<span class="ei">less formal</span>). Some people use <span
+                class="eb">How do you do?</span> in formal situations. The correct reply to this is <span class="eb">How do you do?</span></span></span></span></span></span></li><li
+                class="sn-g" corpus_freq="6" corpus_src="unknown"><span class="num">2</span><span class="label-g">(<span
+                class="geo">British English</span>)</span> <span class="def">used to show that you are surprised by something</span><span
+                class="x-gs"><span class="x-g"> <span class="rx-g"><span
+                class="x">Hello, hello, what's going on here?</span></span></span></span></li><li class="sn-g"><span
+                class="num">3</span><span class="label-g">(<span class="reg">informal</span>)</span> <span class="def">used to show that you think somebody has said something stupid or is not paying attention</span><span
+                class="x-gs"><span class="x-g"> <span class="rx-g"><span class="x">Hello? You didn't really mean that, did you?</span></span></span><span
+                class="x-g"> <span class="rx-g"><span
+                class="x">I'm like, ‘Hello! Did you even listen?’</span></span></span></span></li> <span
+                class="xr-gs"><span class="prefix">see also</span> <a class="Ref" href="entry://golden hello"><span
+                class="xr-g"><span class="xh">golden hello</span></span></a></span></span><span class="res-g"><span
+            class="clps"><span class="unbox"><span class="heading"
+                                                   onclick="if(this.parentNode.className=='unbox'){this.parentNode.className='opbox';}else{this.parentNode.className='unbox';}">Word Origin</span><span
+            class="body"> <span class="def">late 19th cent.</span>: variant of earlier <span class="etym_i">hollo</span>; related to <span
+            class="etym_i">holla</span>.</span></span></span></span></ol>
+</div>
+
+</body>
+</html>
