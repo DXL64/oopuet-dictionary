@@ -1,14 +1,29 @@
 package dictionary;
 
+import dictionary.*;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class MyDictionary {
+public class DictionaryApplication {
+
+    private MultiDictionary mdict = new MultiDictionary("D:\\workspace\\git\\oopuet-dictionary\\src\\res\\mdxs.txt");
+    private DefaultDictionary ddict = new DefaultDictionary();
+
+    public DictionaryApplication() throws IOException {
+        ddict.insertFromFile();
+    }
+
+    public MultiDictionary getMdict() {
+        return mdict;
+    }
+    public DefaultDictionary getDdict() {return ddict; }
+
     public static void main(String[] args) throws IOException {
         System.out.println("START: " + "\n");
         String key = "hell";
 
-        MultiDictionary dict = new MultiDictionary("res\\mdxs.txt");
+        MultiDictionary dict = new MultiDictionary("D:\\workspace\\git\\oopuet-dictionary\\src\\res\\mdxs.txt");
         System.out.println("TEST: " + "\n");
 
 

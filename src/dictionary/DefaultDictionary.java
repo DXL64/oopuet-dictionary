@@ -10,14 +10,18 @@ import java.util.Set;
 public class DefaultDictionary {
     private static final String CHARSET_NAME = "UTF-8";
     private static Dictionary dictionary = new Dictionary();
+
+    public Dictionary getDictionary() {
+        return dictionary;
+    }
     public void insertFromFile() {
         try {
-            File file = new File("dictionary.txt");
+            File file = new File("./src/dictionary/dictionary.txt");
             Scanner scanner = new Scanner(file, CHARSET_NAME);
             while(scanner.hasNextLine()) {
                 String line = scanner.nextLine();
-                String field[] = line.split("   ");
-                dictionary.addNewWord(field[0], field[1]);
+                String field[] = line.split(": ");
+                dictionary.getWords().put(field[0], field[1]);
             }
             scanner.close();
         } catch (FileNotFoundException e) {
@@ -25,10 +29,12 @@ public class DefaultDictionary {
         }
     }
 
-    public void showAllWords() {
+    public ArrayList<String> showAllWords() {
+        ArrayList<String> result = new ArrayList<>();
         Set<String> keySet = dictionary.words.keySet();
         for(String key : keySet)
-            System.out.println(key + " - " + dictionary.words.get(key));
+            result.add(key + ": " + dictionary.words.get(key));
+        return result;
     }
 
     public String lookup(String key) {
@@ -89,7 +95,11 @@ public class DefaultDictionary {
                 res = tmp;
             }
         }
-        return res;
+
+        if(LevenshteinMin <= 3)
+            return res;
+        else
+            return null;
     }
     public static void main(String[] args) {
         DefaultDictionary Ex = new DefaultDictionary();

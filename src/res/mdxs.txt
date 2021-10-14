@@ -1,0 +1,10 @@
+src/res/mdict/Oxford Advanced Learner's Dictionary\Oxford Advanced Learner's Dictionary.mdx
+src/res\mdict\American Heritage Dictionary 5\American Heritage Dictionary 5.mdx
+src/res\mdict\Cambridge Advanced Learner\Cambridge Advanced Learner Dictionary 4.mdx
+src/res\mdict\Collins English Dictionary and Thesaurus, 2015\Collins English Dictionary and Thesaurus, 2015.mdx
+src/res\mdict\Concise Oxford Dictionary 11th ed\Oxford Concise Dictionary 11th ed.mdx
+src/res\mdict\Merriam-Webster Synonyms and Antonyms\Merriam-Webster's Dictionary of Synonyms and Antonyms.mdx
+src/res\mdict\Merriam-Webster Thesaurus\Merriam-Webster's Collegiate Thesaurus, 2015.mdx
+src/res\mdict\Online Etymology Dictionary\Online Etymology Dictionary.mdx
+src/res\mdict\Oxford Collocations\Oxford Collocations Dictionary_2.mdx
+src/res\mdict\Dictionary com Unabridged, 2016\Dictionary.com Unabridged 2016.mdx

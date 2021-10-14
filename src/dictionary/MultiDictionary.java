@@ -12,7 +12,7 @@ import com.knziha.plod.dictionary.mdict;
 public class MultiDictionary {
     private ArrayList<mdict> mdxs = new ArrayList<mdict>();
     public static final String CHARSET_NAME = "UTF-8";
-    public static final String NOT_EXIST = "NULL";
+    //public static final String NOT_EXIST = "NO DATA";
 
     /**
      * MultiDictionary constructor.
@@ -44,7 +44,7 @@ public class MultiDictionary {
             if (search_result != -1) {
                 htmlContents.add(mdxs.get(i).getRecordAt(search_result));
             } else {
-                htmlContents.add(NOT_EXIST);
+                htmlContents.add(null);
             }
         }
         return htmlContents;
@@ -56,7 +56,7 @@ public class MultiDictionary {
      * @return {@code ArrayList<String>} word that has same prefix
      */
     public ArrayList<String> searcher(String key) {
-        return searcher(key,16);
+        return searcher(key,50);
     }
 
 
