@@ -12,7 +12,7 @@ import com.knziha.plod.dictionary.mdict;
 public class MultiDictionary {
     private ArrayList<mdict> mdxs = new ArrayList<mdict>();
     public static final String CHARSET_NAME = "UTF-8";
-    //public static final String NOT_EXIST = "NO DATA";
+    public static final String NOT_EXIST = "<h2>THIS DICTIONARY DON'T HAVE THIS WORD</h2>";
 
     /**
      * MultiDictionary constructor.
@@ -44,7 +44,7 @@ public class MultiDictionary {
             if (search_result != -1) {
                 htmlContents.add(mdxs.get(i).getRecordAt(search_result));
             } else {
-                htmlContents.add(null);
+                htmlContents.add(NOT_EXIST);
             }
         }
         return htmlContents;
@@ -70,7 +70,7 @@ public class MultiDictionary {
         ArrayList<String> entryNames = new ArrayList<>();
 
         int search_result = mdxs.get(0).lookUp(key, false);
-        for (int i = 1; i <= limit; i++) {
+        for (int i = 0; i <= limit; i++) {
             String temp = mdxs.get(0).getEntryAt(search_result + i);
             if (temp.toLowerCase(Locale.ROOT).contains(key)) {
                 entryNames.add(temp);

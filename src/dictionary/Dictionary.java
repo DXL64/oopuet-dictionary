@@ -26,8 +26,6 @@ public class Dictionary {
         }
     }
 
-
-
     public void removeWord(String key) {
         words.remove(key);
     }

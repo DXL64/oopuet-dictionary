@@ -127,6 +127,7 @@ public class SceneBuilder extends Application {
 
         }
         dd_refreshToStart();
+        dd_wordTarget = temp;
         dd_listViewShowWord.getItems().add(temp + ": " + result);
     }
 
@@ -201,7 +202,7 @@ public class SceneBuilder extends Application {
     }
     public void dd_onClickListenIcon() throws Exception {
         VoiceProvider tts = new VoiceProvider("5cfb298cb08e4d09b7106d7e6dddbb4b");
-        System.out.println("Word target on md_onClickListenIcon(): " + md_wordTarget);
+        System.out.println("Word target on dd_onClickListenIcon(): " + dd_wordTarget);
         VoiceParameters params = new VoiceParameters(dd_wordTarget.toLowerCase(Locale.ROOT), Languages.English_UnitedStates);
         params.setCodec(AudioCodec.WAV);
         params.setFormat(AudioFormat.Format_44KHZ.AF_44khz_16bit_stereo);
@@ -211,12 +212,12 @@ public class SceneBuilder extends Application {
 
         byte[] voice = tts.speech(params);
 
-        FileOutputStream fos = new FileOutputStream("voice.wav");
+        FileOutputStream fos = new FileOutputStream("src/res/voice.wav");
         fos.write(voice, 0, voice.length);
         fos.flush();
         fos.close();
 
-        String path = "D:\\workspace\\git\\oopuet-dictionary\\voice.wav";
+        String path = "D:\\workspace\\git\\oopuet-dictionary\\src\\res\\voice.wav";
         Media media = new Media(new File(path).toURI().toURL().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);
@@ -292,12 +293,12 @@ public class SceneBuilder extends Application {
 
         byte[] voice = tts.speech(params);
 
-        FileOutputStream fos = new FileOutputStream("voice.wav");
+        FileOutputStream fos = new FileOutputStream("src\\res\\voice.wav");
         fos.write(voice, 0, voice.length);
         fos.flush();
         fos.close();
 
-        String path = "D:\\workspace\\git\\oopuet-dictionary\\voice.wav";
+        String path = "D:\\workspace\\git\\oopuet-dictionary\\src\\res\\voice.wav";
         Media media = new Media(new File(path).toURI().toURL().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);
