@@ -1,14 +1,19 @@
-package cmdver;
-
 public class Word {
-    private final String wordTarget;
-    private final String wordExplain;
+    private String wordTarget;
+    private String wordExplain;
 
     Word(String wordTarget, String wordExplain) {
         this.wordTarget = wordTarget;
         this.wordExplain = wordExplain;
     }
 
+    public void setWordExplain(String wordExplain) {
+        this.wordExplain = wordExplain;
+    }
+
+    public void setWordTarget(String wordTarget) {
+        this.wordTarget = wordTarget;
+    }
 
     /**
      * Getter method for {@code wordTarget}.
@@ -26,3 +31,4 @@ public class Word {
         return wordExplain;
     }
 }
+
