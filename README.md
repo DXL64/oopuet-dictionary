@@ -39,9 +39,11 @@ Bài tập lớn số 1 - Dictionary (môn học: Lập trình Hướng đối t
 
 ## Preview
 
-===========================================
+DefaultDicionary Tab
 <img src="https://github.com/phamgialinhlx/oopuet-dictionary/blob/main/screenshots/DefaultDictionary.png">
-===========================================
+
+MultiDictionary Tab
 <img src="https://github.com/phamgialinhlx/oopuet-dictionary/blob/main/screenshots/MultiDictionary.png">
-===========================================
+
+Google Translate Tab
 <img src="https://github.com/phamgialinhlx/oopuet-dictionary/blob/main/screenshots/GoogleTranslate.png">
