@@ -21,7 +21,7 @@ Bài tập lớn số 1 - Dictionary (môn học: Lập trình Hướng đối t
 - Using treemap (red - black tree) data structure
 - Add a word to dictionary
 - Delete a word to dictionary
-- Chang word explaination of a word to dictionary
+- Change word explaination of a word to dictionary
 - Look up a word in dictionary
 - Search words that have similar prefix
 - Fuzzy search a word
